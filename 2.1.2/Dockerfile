@@ -116,6 +116,7 @@ COPY 10-docker-default.ini /opt/couchdb/etc/default.d/
 COPY vm.args /opt/couchdb/etc/
 
 COPY ./docker-entrypoint.sh /
+COPY ./local.ini /opt/couchdb/etc/local.ini
 
 # Setup directories and permissions
 RUN chown -R couchdb:couchdb /opt/couchdb/etc/default.d/ /opt/couchdb/etc/vm.args
